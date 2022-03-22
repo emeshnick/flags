@@ -1,6 +1,7 @@
 "use strict";
 
 const db = require("./index");
+const { User } = require("./models");
 
 async function seed() {
   await db.sync({ force: true });

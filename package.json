@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
+  "name": "flags",
   "version": "1.0.0",
-  "description": "Template project for NERD stack applications",
+  "description": "Social media based on proximity",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,8 @@
     "build-client-watch": "webpack -w",
     "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server",
-    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client"
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
+    "seed": "node ./server/db/seed.js"
   },
   "author": "Elijah Meshnick",
   "license": "ISC",
@@ -19,6 +20,7 @@
     "history": "^5.0.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.12",
+    "pg": "^8.7.3",
     "postgres": "^1.0.2",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.0",
